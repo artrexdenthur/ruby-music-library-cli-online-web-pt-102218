@@ -61,10 +61,10 @@ class MusicLibraryController
   
   def list_songs_by_genre
     puts "Please enter the name of a genre:"
-    genre = Artist.find_by_name(gets.chomp)
+    genre = Genre.find_by_name(gets.chomp)
     if genre
       genre.songs.sort_by { |song| song.name }.each_with_index do |song, i|
-        puts "#{i+1}. #{song.name} - #{song.genre.name}"
+        puts "#{i+1}. #{song.name} - #{song.artist.name}"
       end
     end
   end
