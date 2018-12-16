@@ -29,9 +29,9 @@ class MusicLibraryController
   end
   
   def list_songs
-    Song.all.each do |song|
-      
-    
+    Song.all.sort { |song| song.name }.each_with_index do |song, i|
+      puts "#{i} #{song.name}"
+    end
   end
     
   
