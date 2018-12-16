@@ -72,5 +72,6 @@ class MusicLibraryController
   def play_song
     puts "Please choose a song"
     song = Song.find_by_name(gets.chomp)
+  end
   
 end
