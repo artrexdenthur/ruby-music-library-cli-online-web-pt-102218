@@ -57,8 +57,6 @@ class MusicLibraryController
       artist.songs.sort_by { |song| song.name }.each_with_index do |song, i|
         puts "#{i+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
       end
-    else
-      puts "Artist not found"
     end
   end
 end
